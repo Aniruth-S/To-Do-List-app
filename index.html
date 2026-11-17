@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FOCUS - Productivity Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <span class="logo-icon">◈</span>
+                <h2>FOCUS<span>.</span></h2>
+            </div>
+
+            <button id="themeBtn" class="theme-btn">
+                ☀ Light Mode
+            </button>
+        </header>
+
+        <!-- Welcome Section -->
+        <section class="welcome">
+            <p class="small-heading" id="todayDate">YOUR PRODUCTIVITY SPACE</p>
+            <h1>Make today count.</h1>
+            <p class="subtitle">
+                Build discipline. Stay consistent. Achieve more.
+            </p>
+        </section>
+<!-- Motivational Quote -->
+<section class="quote-line">
+    <h2 id="quoteText">
+        "Don't stop when you're tired. Stop when you're done."
+    </h2>
+</section>
+        <!-- Statistics -->
+        <section class="stats">
+
+            <div class="stat-card">
+                <p>Total Tasks</p>
+                <h2 id="totalTasks">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <p>Completed</p>
+                <h2 id="completedTasks">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <p>Pending</p>
+                <h2 id="pendingTasks">0</h2>
+            </div>
+
+        </section>
+
+        <!-- Progress Section -->
+        <section class="progress-card">
+
+            <div class="progress-heading">
+                <h3>Daily Progress</h3>
+                <span id="progressText">0%</span>
+            </div>
+
+            <div class="progress-bar">
+                <div id="progressFill"></div>
+            </div>
+
+            <p>Keep going! Every small step matters.</p>
+
+        </section>
+
+        <!-- Task Input -->
+        <section class="task-section">
+
+            <h2>Manage Your Tasks</h2>
+
+            <div class="task-form">
+
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="What do you need to accomplish?"
+                >
+
+                <select id="priorityInput">
+                    <option value="Low">Low Priority</option>
+                    <option value="Medium" selected>Medium Priority</option>
+                    <option value="High">High Priority</option>
+                </select>
+
+                <input
+                    type="datetime-local"
+                    id="deadlineInput"
+                >
+
+                <button id="addBtn">+ Add Task</button>
+
+            </div>
+
+            <p id="formMessage" class="form-message"></p>
+
+            <!-- Filters -->
+            <div class="task-heading">
+                <h3>Your Tasks</h3>
+
+                <select id="filterInput">
+                    <option value="All">All Tasks</option>
+                    <option value="Pending">Pending</option>
+                    <option value="Completed">Completed</option>
+                </select>
+            </div>
+
+            <!-- Task List -->
+            <div id="taskList" class="task-list"></div>
+
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>FOCUS. Complete your tasks. Build your future.
+            </p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
